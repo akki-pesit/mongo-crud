@@ -27,7 +27,7 @@ def insert_documents(documents, mycoll):
 
 
 def insert_document(document, mycoll):
-    x_insert = mycoll.insert_one(mydict)
+    x_insert = mycoll.insert_one(document)
     return x_insert
 
 
@@ -43,18 +43,18 @@ x_insert_one = mycoll.insert_one(mydict)
 print("Inserted one doc: ", x_insert_one.inserted_id)
 
 mylist = [
-  { "name": "Amy", "address": "Apple st 652"},
-  { "name": "Hannah", "address": "Mountain 21"},
-  { "name": "Michael", "address": "Valley 345"},
-  { "name": "Sandy", "address": "Ocean blvd 2"},
-  { "name": "Betty", "address": "Green Grass 1"},
-  { "name": "Richard", "address": "Sky st 331"},
-  { "name": "Susan", "address": "One way 98"},
-  { "name": "Vicky", "address": "Yellow Garden 2"},
-  { "name": "Ben", "address": "Park Lane 38"},
-  { "name": "William", "address": "Central st 954"},
-  { "name": "Chuck", "address": "Main Road 989"},
-  { "name": "Viola", "address": "Sideway 1633"}
+  {"name": "Amy", "address": "Apple st 652"},
+  {"name": "Hannah", "address": "Mountain 21"},
+  {"name": "Michael", "address": "Valley 345"},
+  {"name": "Sandy", "address": "Ocean blvd 2"},
+  {"name": "Betty", "address": "Green Grass 1"},
+  {"name": "Richard", "address": "Sky st 331"},
+  {"name": "Susan", "address": "One way 98"},
+  {"name": "Vicky", "address": "Yellow Garden 2"},
+  {"name": "Ben", "address": "Park Lane 38"},
+  {"name": "William", "address": "Central st 954"},
+  {"name": "Chuck", "address": "Main Road 989"},
+  {"name": "Viola", "address": "Sideway 1633"}
 ]
 
 x_insert_many = mycoll.insert_many(mylist)
